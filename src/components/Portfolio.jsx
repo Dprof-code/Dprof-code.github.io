@@ -14,15 +14,15 @@ const projects = [
   },
   {
     title: "DeMosaic Homes Real Estate Website",
-    description: "",
-    technologies: ["Wordpress", "Elementor", "CSS"],
+    description: "A responsive real estate website built to showcase property listings, allowing users to search and explore available homes effortlessly.",
+    technologies: ["WordPress", "Elementor", "CSS"],
     codeLink: "#",
     liveLink: "https://demosaichomes.com",
     image: "/projects/thumbnails/DeMosaic Homes.png",
   },
   {
     title: "Crypto Zaurio Presale and Token Website",
-    description: "",
+    description: "A presale and token launch platform for Crypto Zaurio, featuring live token metrics, smart contract integration, and presale functionality.",
     technologies: ["React", "CSS", "ChartJS", "ThirdWeb", "Solidity", "Web3"],
     codeLink: "#",
     liveLink: "https://cryptozaurio.com",
@@ -30,7 +30,7 @@ const projects = [
   },
   {
     title: "Vincent Decent Footwears Website",
-    description: "",
+    description: "An e-commerce website for Vincent Decent Footwears, allowing customers to browse and purchase shoes with a user-friendly interface.",
     technologies: ["React", "Bootstrap", "CSS"],
     codeLink: "#",
     liveLink: "https://vincent-decent-footwears.netlify.app",
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     title: "Rentals Hub Website",
-    description: "",
+    description: "A sleek rental platform for managing properties, allowing users to search, filter, and book rental properties easily.",
     technologies: ["HTML", "CSS", "JavaScript"],
     codeLink: "#",
     liveLink: "https://rentals-hub.netlify.app",
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     title: "Broad Kapital Website",
-    description: "",
+    description: "A corporate website for Broad Kapital, providing financial services with a focus on user-friendly navigation and a professional design.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
     codeLink: "#",
     liveLink: "https://broadkapital.com/",
@@ -54,7 +54,7 @@ const projects = [
   },
   {
     title: "Easync Dropshipping Website",
-    description: "",
+    description: "A dropshipping website designed to facilitate easy and seamless order fulfillment for E-commerce businesses.",
     technologies: ["HTML", "CSS", "JavaScript"],
     codeLink: "#",
     liveLink: "https://myeasync.netlify.app/",
@@ -62,7 +62,7 @@ const projects = [
   },
   {
     title: "Fination Website",
-    description: "",
+    description: "A corporate site for Fination, providing global financial solutions with an intuitive and visually appealing interface.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
     codeLink: "#",
     liveLink: "https://finationglobal.com/",
@@ -70,15 +70,15 @@ const projects = [
   },
   {
     title: "Foodz Hub Restaurant Website",
-    description: "",
-    technologies: ["Wordpress", "Elementor", "CSS"],
+    description: "A dynamic restaurant website, featuring an online menu, reservation system, and a visually rich layout to attract food lovers.",
+    technologies: ["WordPress", "Elementor", "CSS"],
     codeLink: "#",
     liveLink: "https://foodz-hub.netlify.app/",
     image: "/projects/thumbnails/Foodz Hub.png",
   },
   {
     title: "Livefree Website",
-    description: "",
+    description: "A non-profit organization website designed for Livefree International, featuring event management and donation functionalities.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
     codeLink: "#",
     liveLink: "https://livefreeinternational.org/",
@@ -86,7 +86,7 @@ const projects = [
   },
   {
     title: "Shipping Invoice Template",
-    description: "",
+    description: "A simple, clean template for generating shipping invoices, designed to make order management and invoicing seamless.",
     technologies: ["HTML", "CSS"],
     codeLink: "#",
     liveLink: "https://shipping-template.netlify.app/",
@@ -94,7 +94,7 @@ const projects = [
   },
   {
     title: "Tech Book Hub Website",
-    description: "",
+    description: "An online platform designed for book enthusiasts, offering an interactive and user-friendly interface to explore tech books.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     codeLink: "#",
     liveLink: "#",
@@ -102,7 +102,7 @@ const projects = [
   },
   {
     title: "TPSU Campus Event Management System Website",
-    description: "",
+    description: "A complete event management system for TPSU Campus, featuring user registration, ticket sales, and QR code validation for event entry.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
     codeLink: "#",
     liveLink: "https://tpsucampus.com/event",
@@ -110,21 +110,22 @@ const projects = [
   },
   {
     title: "Vista Delmar Villa Vacation Website",
-    description: "",
-    technologies: ["Wordpress", "Elementor", "CSS", "JavaScript"],
+    description: "A vacation rental website designed for Vista Delmar Villa, featuring property listings, booking forms, and an integrated payment system.",
+    technologies: ["WordPress", "Elementor", "CSS", "JavaScript"],
     codeLink: "#",
     liveLink: "https://vistadelmar-villa.com/",
     image: "/projects/thumbnails/Vista Delmar Villa Vacation Rentals.png",
   },
   {
     title: "Web3 Blog Website",
-    description: "",
+    description: "A blog platform built for the Web3 community, offering articles, tutorials, and resources about blockchain and decentralized applications.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     codeLink: "#",
     liveLink: "#",
     image: "/projects/thumbnails/Web3 Blog.png",
   },
 ];
+
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
