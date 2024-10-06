@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #101630;
+    --secondary-color: #50B8DE;
+    --accent-color: #ffcc00;
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --font-family: 'Inter', sans-serif;
+    --fancy-font-family: 'Playfair Display', serif;
+}
+
+.portfolio {
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.portfolio-header {
+    font-size: 2.5rem;
+    font-family: var(--fancy-font-family);
+    margin: 2rem 0;
+    color: white;
+    text-align: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.project.left .project-content {
+    order: 2;
+}
+
+.project.left .project-image-frame {
+    order: 1;
+}
+
+.project.right .project-content {
+    order: 1;
+}
+
+.project.right .project-image-frame {
+    order: 2;
+}
+
+.project-content {
+    max-width: 400px;
+    flex: 1;
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 2rem;
+    font-family: var(--fancy-font-family);
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-technologies {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-icon {
+    color: #fff;
+    font-size: 0.875rem;
+    border-radius: 10px;
+    border: 1px solid var(--accent-color);
+}
+
+.project-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.project-button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.view-url {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    display: block;
+    margin-top: 2rem;
+}
+
+.view-url:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.project-image-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 5px solid var(--accent-color);
+    transform: rotate(-5deg);
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(5deg);
+}
+
+.view-all-button {
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-top: 2rem;
+}
+
+.view-all-button:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-content,
+    .project-image-frame {
+        order: unset;
+        width: 100%;
+    }
+
+    .project-image-frame {
+        margin-bottom: 1rem;
+    }
+
+    .project-technologies,
+    .project-buttons {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project.left .project-content {
+        order: 2;
+    }
+
+    .project.left .project-image-frame {
+        order: 1;
+    }
+
+    .project.right .project-content {
+        order: 2;
+    }
+
+    .project.right .project-image-frame {
+        order: 1;
+    }
+}

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary-color: #101630;
+    --secondary-color: #50B8DE;
+    --accent-color: #ffcc00;
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --font-family: 'Inter', sans-serif;
+    --fancy-font-family: 'Playfair Display', serif;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* gap: 1rem; */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.services-header {
+    font-size: 2.5rem;
+    font-family: var(--fancy-font-family);
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 300px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: var(--fancy-font-family);
+    color: white;
+}
+
+.card-icon {
+    font-size: 30px;
+    color: #f1f1f1;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    padding: 10px;
+    margin-right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    font-family: var(--fancy-font-family);
+    color: var(--primary-color);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* .services-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .service-box {
+            width: 100%;
+            max-width: 300px;
+        } */
+}

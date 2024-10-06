@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #101630;
+    --secondary-color: #50B8DE;
+    --accent-color: #ffcc00;
+    --background-color: #f0f0f0;
+    --text-color: #333333;
+    --font-family: 'Inter', sans-serif;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image {
+    width: 100px;
+    height: auto;
+}
+
+.footer-text {
+    flex: 1;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.footer-social {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    color: white;
+    font-size: 1.5rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-text,
+    .footer-social {
+        flex: none;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
