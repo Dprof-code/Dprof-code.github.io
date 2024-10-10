@@ -43,7 +43,7 @@
     .tech-stack {
         margin: 0.5rem;
         width: 100%;
-        max-width: 150px;
+        width: 50px;
         flex: 1 1 calc(10% - 1rem);
     }
 
@@ -79,8 +79,8 @@
 
 @media (max-width: 768px) {
     .tech-stacks-container {
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
 }

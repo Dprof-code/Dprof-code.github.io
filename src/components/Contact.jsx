@@ -16,7 +16,7 @@ const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          // console.log("SUCCESS!");
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -32,8 +32,8 @@ const Contact = () => {
           <div>
             <h3 className="contact-title">Reach Me</h3>
             <p className="contact-description">
-              I would love to hear from you. Whether you have a question or just
-              want to say hi, feel free to drop a message.
+              I would love to hear from you. Whether you have a project or want
+              to ask questions, feel free to drop a message.
             </p>
             <div className="contact-details">
               <div className="contact-detail">

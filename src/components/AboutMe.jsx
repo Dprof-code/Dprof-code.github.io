@@ -8,7 +8,7 @@ const AboutMe = () => {
         <Reveal className="about-me-left" side="left">
           <div className="image-frame">
             <img
-              src="/headshots/img-3.jpg"
+              src="/headshots/img-3.webp"
               alt="Adedamola Olawale"
               className="about-me-image"
             />

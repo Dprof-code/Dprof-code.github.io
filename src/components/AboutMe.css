@@ -15,7 +15,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    /* padding: 2rem; */
     color: white;
     margin-top: 4rem;
 }

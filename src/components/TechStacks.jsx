@@ -3,25 +3,25 @@ import "./TechStacks.css";
 import Reveal from "./Reveal"; // Import the Reveal component
 
 const techStacks = [
-  { title: "WordPress", image: "/tech-stacks/wordpress.png" },
-  { title: "Shopify", image: "/tech-stacks/shopify.png" },
-  { title: "React", image: "/tech-stacks/react.png" },
-  { title: "PHP", image: "/tech-stacks/php.png" },
-  { title: "JavaScript", image: "/tech-stacks/javascript.png" },
-  { title: "CSS", image: "/tech-stacks/css.png" },
-  { title: "HTML", image: "/tech-stacks/html.png" },
-  { title: "Python", image: "/tech-stacks/python.png" },
-  { title: "jQuery", image: "/tech-stacks/jquery.png" },
-  { title: "Bootstrap", image: "/tech-stacks/bootstrap.png" },
-  { title: "TypeScript", image: "/tech-stacks/typescript.png" },
-  { title: "C", image: "/tech-stacks/c.png" },
-  { title: "Figma", image: "/tech-stacks/figma.png" },
-  { title: "Git", image: "/tech-stacks/git.png" },
-  { title: "GitHub", image: "/tech-stacks/github.png" },
-  { title: "MySQL", image: "/tech-stacks/mysql.png" },
-  { title: "Node.js", image: "/tech-stacks/nodejs.png" },
-  { title: "Software Development", image: "/tech-stacks/software.png" },
-  { title: "Linux", image: "/tech-stacks/linux.png" },
+  { title: "WordPress", image: "/tech-stacks/wordpress.webp" },
+  { title: "Shopify", image: "/tech-stacks/shopify.webp" },
+  { title: "React", image: "/tech-stacks/react.webp" },
+  { title: "PHP", image: "/tech-stacks/php.webp" },
+  { title: "JavaScript", image: "/tech-stacks/javascript.webp" },
+  { title: "CSS", image: "/tech-stacks/css.webp" },
+  { title: "HTML", image: "/tech-stacks/html.webp" },
+  { title: "Python", image: "/tech-stacks/python.webp" },
+  { title: "jQuery", image: "/tech-stacks/jquery.webp" },
+  { title: "Bootstrap", image: "/tech-stacks/bootstrap.webp" },
+  { title: "TypeScript", image: "/tech-stacks/typescript.webp" },
+  { title: "C", image: "/tech-stacks/c.webp" },
+  { title: "Figma", image: "/tech-stacks/figma.webp" },
+  { title: "Git", image: "/tech-stacks/git.webp" },
+  { title: "GitHub", image: "/tech-stacks/github.webp" },
+  { title: "MySQL", image: "/tech-stacks/mysql.webp" },
+  { title: "Node.js", image: "/tech-stacks/nodejs.webp" },
+  { title: "Software Development", image: "/tech-stacks/software.webp" },
+  { title: "Linux", image: "/tech-stacks/linux.webp" },
 ];
 
 const TechStacks = () => {
@@ -31,7 +31,7 @@ const TechStacks = () => {
       <div className="tech-stacks-container">
         {techStacks.map((tech, index) => (
           <Reveal key={index} side="top">
-            <TechStack title={tech.title} image={tech.image} />
+            <TechStack title={tech.title} loading="lazy" image={tech.image} />
           </Reveal>
         ))}
       </div>
