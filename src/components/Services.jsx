@@ -11,8 +11,6 @@ import {
   FaHome,
   FaBuilding,
   FaBitcoin,
-  FaBolt,
-  FaChalkboardTeacher,
 } from "react-icons/fa";
 import { useState } from "react";
 import Reveal from "./Reveal"; // Import the Reveal component
@@ -95,18 +93,6 @@ const services = [
     title: "Crypto & Web3 Website Development",
     description:
       "I develop secure, user-friendly websites tailored for cryptocurrency and Web3 projects. Whether you need a landing page for your ICO, a decentralized exchange (DEX), or a platform for NFTs, I ensure your site is built with security, scalability, and user experience in mind to meet the demands of the blockchain industry.",
-  },
-  {
-    icon: <FaBolt />,
-    title: "Zapier Integration",
-    description:
-      "Automate your business processes with custom Zapier integrations. I help you connect apps and services, allowing you to automate repetitive tasks and streamline your workflows. From email marketing automation to CRM integration, I can create a system that saves you time and boosts efficiency.",
-  },
-  {
-    icon: <FaChalkboardTeacher />,
-    title: "Programming Tutor",
-    description:
-      "As a programming tutor, I offer personalized lessons that help you learn to code and build your skills in web and software development. Whether you're a complete beginner or looking to enhance your skills, I provide one-on-one tutoring to help you master programming languages and development tools.",
   },
 ];
 

@@ -58,7 +58,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="footer-text">
-        <p>2024 - ProDevX Tech, All rights reserved</p>
+        <p>2025 - ProDevX Solutions, All rights reserved</p>
       </div>
     </footer>
   );

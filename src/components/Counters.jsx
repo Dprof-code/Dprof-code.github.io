@@ -1,11 +1,11 @@
 import "./Counters.css";
 import Count from "./Count";
-import Reveal from "./Reveal"; // Import the Reveal component
+import Reveal from "./Reveal";
 
 const stats = [
   { title: "Years of Experience", count: 5 },
-  { title: "Websites Built", count: 500 },
-  { title: "Satisfied Clients", count: 500 },
+  { title: "Websites Built", count: 100 },
+  { title: "Satisfied Clients", count: 100 },
   { title: "Technologies", count: 20 },
 ];
 
