@@ -4,8 +4,8 @@ import Reveal from "./Reveal";
 
 const stats = [
   { title: "Years of Experience", count: 5 },
-  { title: "Websites Built", count: 100 },
-  { title: "Satisfied Clients", count: 100 },
+  { title: "Websites Built", count: 50 },
+  { title: "Satisfied Clients", count: 50 },
   { title: "Technologies", count: 20 },
 ];
 
