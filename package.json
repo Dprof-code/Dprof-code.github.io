@@ -9,11 +9,14 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "build": "vite build",
+    "build:css": "npx @tailwindcss/cli -i ./src/App.css -o ./src/styles.css --watch",
+    "compile:css": "npx @tailwindcss/cli -i ./src/App.css -o ./src/styles.css --minify",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@tailwindcss/cli": "^4.1.5",
     "dprof-code-portfolio": "file:",
     "framer-motion": "^11.11.1",
     "react": "^18.3.1",
@@ -24,6 +27,7 @@
     "react-loader-spinner": "^6.1.6",
     "react-tsparticles": "^2.9.3",
     "react-typed": "^2.0.12",
+    "tailwindcss": "^4.1.5",
     "tsparticles": "^3.5.0",
     "tsparticles-slim": "^2.12.0"
   },

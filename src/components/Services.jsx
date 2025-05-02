@@ -1,127 +1,124 @@
-import "./Services.css";
-import Card from "./Card";
-import {
-  FaCode,
-  FaPaintBrush,
-  FaMobileAlt,
-  FaServer,
-  FaCogs,
-  FaRocket,
-  FaTools,
-  FaHome,
-  FaBuilding,
-  FaBitcoin,
-} from "react-icons/fa";
 import { useState } from "react";
-import Reveal from "./Reveal"; // Import the Reveal component
+import { motion } from "framer-motion";
+import {
+  FaCode, FaPaintBrush, FaMobileAlt, FaServer, FaCogs,
+  FaTools, FaBitcoin
+} from "react-icons/fa";
+import Card from "./Card";
+import Reveal from "./Reveal";
 
 const services = [
   {
     icon: <FaCode />,
     title: "Web Development",
     description:
-      "I design and develop modern, responsive websites tailored to your business needs. Whether you're launching a new site or need a revamp, I ensure your web application is optimized for speed, functionality, and user experience, making sure it works seamlessly across all devices.",
+      "I build fast, responsive websites that work beautifully on phones, tablets, and desktops. Your site will look great and load quickly to keep visitors engaged.",
   },
   {
     icon: <FaCogs />,
     title: "CMS Development",
     description:
-      "I specialize in building websites using popular Content Management Systems like WordPress, Shopify, and Wix. This allows you to easily manage and update your website's content without needing technical skills. From creating an online store on Shopify to launching a blog or corporate site on WordPress, I ensure your site is not only functional but also visually appealing and optimized for search engines.",
-  },
-  {
-    icon: <FaCogs />,
-    title: "Software Development",
-    description:
-      "I develop bespoke software solutions that are designed specifically to meet the needs of your business. From desktop applications to cloud-based solutions, my goal is to create software that simplifies your operations, increases productivity, and drives growth, with an emphasis on scalability and user-friendliness.",
-  },
-  {
-    icon: <FaRocket />,
-    title: "Website Deployment",
-    description:
-      "Once your website is built, I handle the entire deployment process, ensuring a smooth transition from development to live servers. I follow best practices to guarantee your site is secure, fast, and fully optimized for search engines and performance, with ongoing support to help you manage your site post-launch.",
+      "I set up easy-to-use sites on platforms like WordPress, Shopify, and Wix so you can update content yourself. Whether it’s a blog, store, or company site, I make it simple and styled to your brand.",
   },
   {
     icon: <FaPaintBrush />,
     title: "Front-End Web Development",
     description:
-      "I bring your designs to life by building intuitive and visually appealing front-end interfaces. Using the latest technologies like HTML, CSS, and JavaScript, I ensure that every aspect of your site is engaging, mobile-responsive, and optimized for user experience, giving your visitors a reason to stay and explore.",
+      "I turn designs into interactive web pages using HTML, CSS, and JavaScript. Every page is mobile-friendly and looks great to help visitors enjoy your site.",
   },
   {
     icon: <FaServer />,
     title: "Back-End Web Development",
     description:
-      "I develop robust, secure, and scalable back-end systems to power your web applications. From handling databases to building APIs and managing server infrastructure, my back-end development ensures that your website or app performs smoothly and can handle growing traffic and user demands.",
+      "I build the server-side of your site—databases, APIs, and server setup—to make sure everything runs smoothly. Your app will be secure, reliable, and ready for growth.",
   },
   {
     icon: <FaMobileAlt />,
     title: "Blockchain Development",
     description:
-      "I develop decentralized applications (dApps) and smart contracts on blockchain platforms like Ethereum and Binance Smart Chain. Whether you're looking to launch an NFT marketplace, create a token, or build a decentralized finance (DeFi) platform, I provide end-to-end blockchain solutions that ensure security, transparency, and reliability.",
+      "I create secure dApps and smart contracts on blockchains like Ethereum and BSC. From NFTs to DeFi platforms, I handle everything for a safe, transparent experience.",
   },
   {
     icon: <FaTools />,
     title: "Website Management",
     description:
-      "Managing a website can be overwhelming, but I provide ongoing management services to ensure your site remains up-to-date, secure, and optimized for performance. Whether you need regular content updates, security monitoring, or performance tuning, I handle it all so you can focus on running your business.",
+      "I keep your site updated, secure, and performing well so you don’t have to worry. Regular checks and updates mean you can focus on your business, not tech.",
   },
   {
     icon: <FaTools />,
     title: "Website Maintenance",
     description:
-      "I offer comprehensive maintenance packages that include regular updates, backups, security patches, and performance monitoring. My goal is to keep your website running smoothly and protect it from vulnerabilities, ensuring a reliable online presence for your business.",
-  },
-  {
-    icon: <FaHome />,
-    title: "Vacation Rentals Website Development",
-    description:
-      "I design custom websites for vacation rental businesses, complete with features like online booking systems, property listings, and integrated payment gateways. Whether you’re managing a small B&B or a large property portfolio, I’ll help you build a site that attracts guests and makes managing bookings effortless.",
-  },
-  {
-    icon: <FaBuilding />,
-    title: "Cleaning Service Website Development",
-    description:
-      "I build professional websites tailored specifically for cleaning services. From showcasing your offerings to integrating scheduling systems, my goal is to create a website that not only looks great but also helps streamline client bookings and inquiries, helping you grow your business effortlessly.",
-  },
-  {
-    icon: <FaBuilding />,
-    title: "Real-Estate & AirBNB Website Development",
-    description:
-      "I create custom real estate and AirBNB websites that make property listings easy to manage and navigate. With built-in features like property searches, booking systems, and integration with popular platforms like AirBNB, I’ll help you showcase your properties and manage client inquiries and bookings with ease.",
+      "I handle all updates, backups, security patches, and performance checks for your site. This keeps your site running smoothly and protected from threats.",
   },
   {
     icon: <FaBitcoin />,
     title: "Crypto & Web3 Website Development",
     description:
-      "I develop secure, user-friendly websites tailored for cryptocurrency and Web3 projects. Whether you need a landing page for your ICO, a decentralized exchange (DEX), or a platform for NFTs, I ensure your site is built with security, scalability, and user experience in mind to meet the demands of the blockchain industry.",
+      "I build user-friendly sites for crypto projects—ICO landing pages, DEXs, and NFT platforms. Every site is secure, scalable, and designed for a top-notch user experience.",
   },
 ];
 
 const Services = () => {
   const [showAll, setShowAll] = useState(false);
-
-  const handleToggle = () => {
-    setShowAll(!showAll);
-  };
+  const [activeCard, setActiveCard] = useState(null);
 
   return (
-    <section id="services" className="container services">
-      <h2 className="services-header">Services</h2>
-      <div className="service-grid">
-        {services
-          .slice(0, showAll ? services.length : 4)
-          .map((service, index) => (
-            <Reveal key={index} side="top">
+    <section id="services" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">
+            Services
+          </h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Comprehensive web solutions tailored to your needs
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+          {services.slice(0, showAll ? services.length : 6).map((service, index) => (
+            <Reveal key={index} side={index % 2 === 0 ? "left" : "right"}>
               <Card
                 title={service.title}
                 description={service.description}
                 icon={service.icon}
+                isActive={activeCard === index}
+                onHover={() => setActiveCard(index)}
+                onLeave={() => setActiveCard(null)}
               />
             </Reveal>
           ))}
+        </div>
+
+        <motion.button
+          onClick={() => setShowAll(!showAll)}
+          className="mx-auto mt-12 px-8 py-4 bg-accent text-primary font-semibold rounded-lg 
+                    hover:bg-secondary transition-all duration-300 flex items-center gap-2 
+                    shadow-lg hover:shadow-secondary/20"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {showAll ? (
+            <>
+              Show Less
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </>
+          ) : (
+            <>
+              View All Services
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </>
+          )}
+        </motion.button>
       </div>
-      <button className="view-all-button" onClick={handleToggle}>
-        {showAll ? "Show Less" : "View All"}
-      </button>
     </section>
   );
 };

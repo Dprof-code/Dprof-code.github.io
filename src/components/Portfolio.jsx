@@ -1,6 +1,6 @@
-import "./Portfolio.css";
-import { useState, Suspense } from "react";
-import Reveal from "./Reveal"; // Import the Reveal component
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 
 const projects = [
   {
@@ -142,61 +142,117 @@ const projects = [
 
 const Portfolio = () => {
   const [showAll, setShowAll] = useState(false);
-
-  const handleToggle = () => {
-    setShowAll(!showAll);
-  };
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section id="portfolio" className="container portfolio">
-      <h2 className="portfolio-header">Portfolio</h2>
-      {projects
-        .slice(0, showAll ? projects.length : 2)
-        .map((project, index) => (
-          <div
-            className={`project ${index % 2 === 0 ? "left" : "right"}`}
-            key={index}
-          >
-            <Reveal side={index % 2 === 0 ? "left" : "right"}>
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-technologies">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span className="tech-icon" key={techIndex}>
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-            <Reveal side={index % 2 === 0 ? "right" : "left"}>
-              <div className="project-image-frame">
-                <Suspense fallback={<div>Loading...</div>}>
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="project-image"
-                    loading="lazy"
-                  />
-                </Suspense>
-              </div>
-              {project.liveLink != "#" && (
-                <a
-                  href={project.liveLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="view-url"
+    <section id="portfolio" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className="text-4xl md:text-5xl font-playfair font-bold text-white text-center mb-16"
+        >
+          Featured Projects
+        </motion.h2>
+
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 gap-12 mx-auto max-w-md md:max-w-none px-4">
+            {projects.slice(0, showAll ? projects.length : 3).map((project, index) => (
+              <Reveal key={index} side={index % 2 === 0 ? "left" : "right"}>
+                <motion.div
+                  className="relative grid md:grid-cols-2 gap-8 items-center bg-primary/30 
+                          rounded-2xl p-6 border border-secondary/20 backdrop-blur-sm
+                          hover:border-secondary/50 transition-all duration-300"
+                  whileHover={{ scale: 1.02 }}
                 >
-                  Live Preview
-                </a>
-              )}
-            </Reveal>
+                  {/* Project Image */}
+                  <div className={`${index % 2 === 0 ? 'order-1' : 'order-1 md:order-2'}`}>
+                    <motion.div
+                      className="relative group"
+                      onHoverStart={() => setHoveredIndex(index)}
+                      onHoverEnd={() => setHoveredIndex(null)}
+                    >
+                      <div className="absolute inset-0 bg-accent/20 rounded-xl transform rotate-3 
+                                  group-hover:rotate-0 transition-transform duration-300" />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="relative rounded-xl shadow-2xl w-full h-[300px] object-cover 
+                              transform -rotate-3 group-hover:rotate-0 transition-transform duration-300"
+                        loading="lazy"
+                      />
+                    </motion.div>
+                  </div>
+
+                  {/* Project Info */}
+                  <div className={`space-y-4 ${index % 2 === 0 ? 'order-2' : 'order-2 md:order-1'}`}>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1 text-sm bg-accent/10 text-accent rounded-full 
+                                border border-accent/20 hover:border-accent/50 transition-colors"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    {project.liveLink !== "#" && (
+                      <motion.a
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center px-6 py-3 bg-accent text-primary font-semibold 
+                              rounded-lg hover:bg-secondary transition-all duration-300 
+                              shadow-lg hover:shadow-secondary/20"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Live Preview
+                        <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </motion.a>
+                    )}
+                  </div>
+                </motion.div>
+              </Reveal>
+            ))}
           </div>
-        ))}
-      <button className="view-all-button" onClick={handleToggle}>
-        {showAll ? "Show Less" : "View All"}
-      </button>
+        </div>
+
+        <motion.button
+          onClick={() => setShowAll(!showAll)}
+          className="mx-auto mt-12 px-8 py-4 bg-accent text-primary font-semibold rounded-lg 
+                    hover:bg-secondary transition-all duration-300 flex items-center gap-2
+                    shadow-lg hover:shadow-secondary/20"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          {showAll ? (
+            <>
+              Show Less
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 15l7-7 7 7" />
+              </svg>
+            </>
+          ) : (
+            <>
+              View All Projects
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </>
+          )}
+        </motion.button>
+      </div>
     </section>
   );
 };

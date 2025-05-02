@@ -1,10 +1,9 @@
+import { motion } from "framer-motion";
 import TechStack from "./TechStack";
-import "./TechStacks.css";
-import Reveal from "./Reveal"; // Import the Reveal component
+import Reveal from "./Reveal";
 
 const techStacks = [
   { title: "WordPress", image: "/tech-stacks/wordpress.webp" },
-  { title: "Shopify", image: "/tech-stacks/shopify.webp" },
   { title: "React", image: "/tech-stacks/react.webp" },
   { title: "PHP", image: "/tech-stacks/php.webp" },
   { title: "JavaScript", image: "/tech-stacks/javascript.webp" },
@@ -20,20 +19,36 @@ const techStacks = [
   { title: "GitHub", image: "/tech-stacks/github.webp" },
   { title: "MySQL", image: "/tech-stacks/mysql.webp" },
   { title: "Node.js", image: "/tech-stacks/nodejs.webp" },
-  { title: "Software Development", image: "/tech-stacks/software.webp" },
-  { title: "Linux", image: "/tech-stacks/linux.webp" },
 ];
 
 const TechStacks = () => {
   return (
-    <section id="experience" className="container tech-stacks">
-      <h2 className="tech-stacks-header">Experience</h2>
-      <div className="tech-stacks-container">
-        {techStacks.map((tech, index) => (
-          <Reveal key={index} side="top">
-            <TechStack title={tech.title} loading="lazy" image={tech.image} />
-          </Reveal>
-        ))}
+    <section id="experience" className="py-20 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">
+            Experience
+          </h2>
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            Technologies and tools I work with
+          </p>
+        </motion.div>
+
+        <div className="flex justify-center">
+          <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6 lg:gap-8 
+                    max-w-lg md:max-w-none mx-auto px-4">
+            {techStacks.map((tech, index) => (
+              <Reveal key={index} side="top">
+                <TechStack title={tech.title} image={tech.image} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
