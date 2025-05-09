@@ -29,9 +29,7 @@ function App() {
         <Preloader />
       ) : (
         <>
-          <header>
             <NavBar />
-          </header>
           <ParticlesBackground />
           <main>
             <Home />

@@ -11,3 +11,14 @@
   --font-inter: "Inter", "sans-serif";
   --font-playfair: "Playfair Display", "serif";
 }
+
+:root {
+  --navbar-height: 72px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}

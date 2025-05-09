@@ -19,7 +19,7 @@ const NavBar = () => {
       animate={{ y: 0 }}
       className="fixed top-0 w-full bg-primary/95 backdrop-blur-sm z-50 px-4 lg:px-8 py-4 border-b border-secondary/10"
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
         <Logo />
 
         {/* Desktop Menu */}
@@ -51,7 +51,8 @@ const NavBar = () => {
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-white p-2 -mr-2"
+          aria-label="Toggle menu"
         >
           <svg
             className="w-6 h-6"

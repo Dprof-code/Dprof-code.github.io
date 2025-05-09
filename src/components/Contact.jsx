@@ -34,8 +34,8 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -50,12 +50,12 @@ const Contact = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-start">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-start">
           <Reveal side="left">
-            <div className="space-y-8 px-4">
+            <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-white mb-4">Reach Me</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   I would love to hear from you. Whether you have a project or want
                   to ask questions, feel free to drop a message.
                 </p>
@@ -91,11 +91,11 @@ const Contact = () => {
             </div>
           </Reveal>
 
-          <Reveal side="right" className="flex justify-center w-full px-4">
+          <Reveal side="right" className="flex justify-center w-full">
             <motion.form
               ref={form}
               onSubmit={sendEmail}
-              className="space-y-6 relative w-[400px]"
+              className="space-y-6 relative max-w-[400px]"
             >
               <motion.div
                 className="relative w-full"
@@ -151,7 +151,7 @@ const Contact = () => {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-8 py-4 bg-accent text-primary font-semibold rounded-lg
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-accent text-primary font-semibold rounded-lg
                hover:bg-secondary transition-all duration-300 relative
                disabled:opacity-50 disabled:cursor-not-allowed
                shadow-lg hover:shadow-secondary/20"

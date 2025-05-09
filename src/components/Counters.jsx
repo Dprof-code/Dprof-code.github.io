@@ -43,8 +43,7 @@ const Counters = () => {
                 <motion.img
                   src={stat.icon}
                   alt={stat.title}
-                  className="w-12 h-12 sm:w-16 sm:h-16 mb-2 object-contain filter brightness-0 invert 
-                           hover:filter-none hover:brightness-100 hover:invert-0
+                  className="w-12 h-12 sm:w-16 sm:h-16 mb-2 object-contain
                            transition-all duration-300"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   transition={{ type: "spring", stiffness: 200 }}
