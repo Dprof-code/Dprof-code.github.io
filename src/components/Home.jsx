@@ -10,7 +10,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Text Content */}
-          <div className="space-y-6 md:space-y-8 text-white z-10">
+          <div className="space-y-6 md:space-y-8 text-white z-10 sm">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,12 +77,12 @@ const Home = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="relative mt-8 lg:mt-0"
+                className="relative mt-8 lg:mt-0 order-1 lg:order-2"
               >
                 <div className="relative z-10 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-2 w-full">
                   <img
                     src="/web-images/prodevx_solutions_developer_coding.jpeg"
-                    alt="Hero Image"
+                    alt="Full Stack Developer Coding"
                     className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 w-full"
                     loading="lazy"
                   />
