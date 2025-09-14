@@ -91,14 +91,14 @@ const Contact = () => {
             </div>
           </Reveal>
 
-          <Reveal side="right" className="flex justify-center w-full">
+          <Reveal side="right" width="100%">
             <motion.form
               ref={form}
               onSubmit={sendEmail}
-              className="space-y-6 relative max-w-[400px]"
+              className="space-y-6 w-full"
             >
               <motion.div
-                className="relative w-full"
+                className="w-full"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -107,15 +107,15 @@ const Contact = () => {
                   name="from_name"
                   placeholder="Name"
                   required
-                  className="w-full px-6 py-4 bg-primary/30 border border-secondary/20 rounded-lg
-                 text-white placeholder-gray-400 focus:outline-none focus:border-secondary
-                 focus:ring-2 focus:ring-secondary/20 focus:bg-primary/50
-                 transition-all duration-300"
+                  className="w-full box-border px-4 sm:px-6 py-3 sm:py-4 bg-primary/30 border border-secondary/20 rounded-lg
+                             text-white placeholder-gray-400 focus:outline-none focus:border-secondary
+                             focus:ring-2 focus:ring-secondary/20 focus:bg-primary/50
+                             transition-all duration-300"
                 />
               </motion.div>
 
               <motion.div
-                className="relative w-full"
+                className="w-full"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -124,15 +124,15 @@ const Contact = () => {
                   name="from_email"
                   placeholder="Email"
                   required
-                  className="w-full px-6 py-4 bg-primary/30 border border-secondary/20 rounded-lg
-                 text-white placeholder-gray-400 focus:outline-none focus:border-secondary
-                 focus:ring-2 focus:ring-secondary/20 focus:bg-primary/50
-                 transition-all duration-300"
+                  className="w-full box-border px-4 sm:px-6 py-3 sm:py-4 bg-primary/30 border border-secondary/20 rounded-lg
+                             text-white placeholder-gray-400 focus:outline-none focus:border-secondary
+                             focus:ring-2 focus:ring-secondary/20 focus:bg-primary/50
+                             transition-all duration-300"
                 />
               </motion.div>
 
               <motion.div
-                className="relative w-full"
+                className="w-full"
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -141,20 +141,20 @@ const Contact = () => {
                   placeholder="Message"
                   required
                   rows="4"
-                  className="w-full px-6 py-4 bg-primary/30 border border-secondary/20 rounded-lg
-                 text-white placeholder-gray-400 focus:outline-none focus:border-secondary
-                 focus:ring-2 focus:ring-secondary/20 focus:bg-primary/50
-                 transition-all duration-300 resize-none"
+                  className="w-full box-border px-4 sm:px-6 py-3 sm:py-4 bg-primary/30 border border-secondary/20 rounded-lg
+                             text-white placeholder-gray-400 focus:outline-none focus:border-secondary
+                             focus:ring-2 focus:ring-secondary/20 focus:bg-primary/50
+                             transition-all duration-300 resize-none"
                 ></textarea>
               </motion.div>
 
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-accent text-primary font-semibold rounded-lg
-               hover:bg-secondary transition-all duration-300 relative
-               disabled:opacity-50 disabled:cursor-not-allowed
-               shadow-lg hover:shadow-secondary/20"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-accent text-primary font-semibold rounded-lg
+                           hover:bg-secondary transition-all duration-300 relative
+                           disabled:opacity-50 disabled:cursor-not-allowed
+                           shadow-lg hover:shadow-secondary/20"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >

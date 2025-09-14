@@ -81,7 +81,7 @@ const Home = () => {
               >
                 <div className="relative z-10 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-2 w-full">
                   <img
-                    src="/web-images/hero-image1.png"
+                    src="/web-images/prodevx_solutions_developer_coding.jpeg"
                     alt="Hero Image"
                     className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 w-full"
                     loading="lazy"

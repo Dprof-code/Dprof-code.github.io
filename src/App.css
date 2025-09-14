@@ -2,9 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "tailwindcss";
 
+/* --color-secondary: #50b8de; */
+
 @theme {
   --color-primary: #101630;
-  --color-secondary: #50b8de;
+  --color-secondary: #f25a38;
   --color-accent: #ffcc00;
   --color-accent-2: #f0f0f0;
   --color-neutral-1: #333333;
