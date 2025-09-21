@@ -9,6 +9,7 @@ import TechStacks from "./components/TechStacks";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Counters from "./components/Counters";
+import Testimonials from "./components/Testimonials";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Preloader from "./components/Preloader";
 
@@ -29,7 +30,7 @@ function App() {
         <Preloader />
       ) : (
         <>
-            <NavBar />
+          <NavBar />
           <ParticlesBackground />
           <main>
             <Home />
@@ -38,6 +39,7 @@ function App() {
             <Portfolio />
             <Services />
             <TechStacks />
+            <Testimonials />
             <Contact />
           </main>
           <Footer />

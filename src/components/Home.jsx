@@ -8,9 +8,31 @@ const Home = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-[calc(var(--navbar-height)+2rem)]">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-6 md:space-y-8 text-white z-10 sm">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+          {/* Image Content - Top on mobile, right on desktop */}
+          <Suspense fallback={<div>Loading...</div>}>
+            <Reveal side="right">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="relative mt-8 lg:mt-0 order-1 lg:order-2 w-full"
+              >
+                <div className="relative z-10 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-2 w-full">
+                  <img
+                    src="/web-images/prodevx_solutions_developer_coding.jpeg"
+                    alt="Full Stack Developer Coding"
+                    className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 w-full"
+                    loading="lazy"
+                  />
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent rounded-full opacity-20 blur-xl"></div>
+                </div>
+              </motion.div>
+            </Reveal>
+          </Suspense>
+
+          {/* Text Content - Bottom on mobile, left on desktop */}
+          <div className="space-y-6 md:space-y-8 text-white z-10 order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -19,20 +41,20 @@ const Home = () => {
               <span className="text-secondary font-medium tracking-wider">
                 Hi, I&apos;m Abraham
               </span>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-2 leading-tight">
+              <p className="text-3xl sm:text-4xl md:text-6xl font-bold mt-2 leading-tight">
                 I Build High-Performance
                 <MorphingText />
-              </h1>
+              </p>
             </motion.div>
 
-            <motion.p
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-gray-300 text-base sm:text-lg md:text-xl max-w-xl"
             >
-              Fullstack Web Developer specializing in creating engaging, scalable, and user-friendly web experiences for your website visitors.
-            </motion.p>
+              Fullstack Web Developer specializing in creating engaging, professional, and user-friendly websites for your business and brand.
+            </motion.h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -69,28 +91,6 @@ const Home = () => {
 
             </motion.div>
           </div>
-
-          {/* Image Content */}
-          <Suspense fallback={<div>Loading...</div>}>
-            <Reveal side="right">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="relative mt-8 lg:mt-0 order-1 lg:order-2"
-              >
-                <div className="relative z-10 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-2 w-full">
-                  <img
-                    src="/web-images/prodevx_solutions_developer_coding.jpeg"
-                    alt="Full Stack Developer Coding"
-                    className="rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-300 w-full"
-                    loading="lazy"
-                  />
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent rounded-full opacity-20 blur-xl"></div>
-                </div>
-              </motion.div>
-            </Reveal>
-          </Suspense>
         </div>
       </div>
     </section>
