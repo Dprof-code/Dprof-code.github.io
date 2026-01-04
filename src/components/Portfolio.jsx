@@ -7,15 +7,6 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "DeMosaic Homes Real Estate Website",
-      description:
-        "A responsive real estate website built to showcase property listings, allowing users to search and explore available homes effortlessly.",
-      technologies: ["WordPress", "Elementor", "CSS"],
-      codeLink: "#",
-      liveLink: "https://demosaichomes.com",
-      image: "/projects/thumbnails/DeMosaic Homes.png",
-    },
-    {
       title: "Foodz Hub Restaurant Website",
       description:
         "A dynamic restaurant website, featuring an online menu, reservation system, and a visually rich layout to attract food lovers.",
