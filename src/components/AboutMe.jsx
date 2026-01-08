@@ -5,7 +5,20 @@ const Reveal = lazy(() => import("./Reveal"));
 
 const AboutMe = () => {
   return (
-    <section id="about" className="max-w-7xl mx-auto w-full px-4 py-20 min-h-screen flex items-center">
+    <section id="about" className="max-w-7xl mx-auto w-full px-4 py-20 min-h-screen flex flex-col justify-center">
+      {/* Header Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-4xl text-accent-2 lg:text-5xl font-bold font-playfair mb-4">
+          About <span style={{ color: '#f25a38' }}>Me</span>
+        </h2>
+        <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#f25a38' }}></div>
+      </motion.div>
+
       <div className="grid lg:grid-cols-2 gap-12 items-center px-6">
         {/* Image Section */}
         <Reveal side="left">
@@ -29,24 +42,15 @@ const AboutMe = () => {
         {/* Content Section */}
         <Reveal side="right">
           <div className="space-y-6 text-white">
-            <motion.div
+            <motion.h3
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="text-2xl lg:text-3xl font-bold font-playfair"
+              style={{ color: '#f25a38' }}
             >
-              <h2 className="text-4xl lg:text-5xl font-bold font-playfair mb-4">
-                About Me
-              </h2>
-              <div className="space-y-2">
-                <p className="text-xl lg:text-2xl font-semibold text-secondary">
-                  Your Digital Transformation Partner:
-                </p>
-                <p className="text-lg text-gray-300 italic">
-                  Providing Optimized Business Solutions,
-                  <br /> One Line of <span className="text-accent">{"<Code/>"}</span> at a Time...
-                </p>
-              </div>
-            </motion.div>
+              Full-Stack Developer & CRM Automation Specialist
+            </motion.h3>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -54,10 +58,16 @@ const AboutMe = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-gray-300 text-lg leading-relaxed"
             >
-              My name is Abraham Adedamola Olawale. I am a Fullstack Software
-              Developer with more than 5 years of experience in building web
-              applications using modern technologies. I am passionate about
-              coding and always eager to learn new things.
+              I&apos;m Abraham, a dedicated full-stack developer with deep expertise in backend engineering and modern web technologies like Node.js, TypeScript, React, Next.js, and Express. My passion lies in crafting scalable, production-ready APIs and server-side systems that seamlessly blend robust backend functionality with engaging front-end experiences, leveraging tools like PostgreSQL, MongoDB, Redis, and AI integrations including OpenAI.
+            </motion.p>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="text-gray-300 text-lg leading-relaxed"
+            >
+              Combining technical proficiency and creative problem-solving, I consistently deliver performant solutions using microservices architecture, Docker, message queues, and intelligent automation workflows through platforms like Zapier and Make. Driven to stay ahead of technological trends, I continually expand my skillset to ensure every project exceeds client expectations and delights users.
             </motion.p>
 
             <motion.div
