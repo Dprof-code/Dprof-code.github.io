@@ -137,14 +137,18 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
-        <motion.h2
+        {/* Header Section */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-playfair font-bold text-center text-white mb-6"
+          className="text-center mb-12"
         >
-          Featured Projects
-        </motion.h2>
+          <h2 className="text-4xl text-accent-2 lg:text-5xl font-bold font-playfair mb-4">
+            Featured <span style={{ color: '#f25a38' }}>Projects</span>
+          </h2>
+          <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#f25a38' }}></div>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}

@@ -38,12 +38,15 @@ const NavBar = () => {
           ))}
           <motion.a
             href="#contact"
-            className="px-4 py-2 bg-accent text-primary font-semibold rounded-lg 
-              hover:bg-secondary transition-all duration-300 hover:shadow-lg hover:shadow-secondary/20"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="relative inline-flex items-center bg-accent hover:bg-accent/90 text-primary font-semibold 
+                  px-4 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-accent/50
+                  group overflow-hidden"
           >
-            Contact
+            <span className="relative z-10">Contact</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
 
@@ -99,7 +102,7 @@ const NavBar = () => {
                     {item.label}
                   </motion.a>
                 ))}
-                <motion.a
+                {/* <motion.a
                   href="#contact"
                   className="px-4 py-2 bg-accent text-primary font-semibold rounded-lg 
                     hover:bg-secondary transition-all duration-300 inline-block text-center"
@@ -108,6 +111,20 @@ const NavBar = () => {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
+                </motion.a> */}
+
+                <motion.a
+                  href="#contact"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="relative inline-flex items-center bg-accent hover:bg-accent/90 text-primary font-semibold 
+                  px-4 py-2 rounded-lg transition-all duration-300 shadow-lg hover:shadow-accent/50
+                  group overflow-hidden"
+                >
+                  <span className="relative z-10">Contact</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-secondary to-accent opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.a>
               </div>
             </motion.div>

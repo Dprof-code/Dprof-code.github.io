@@ -18,7 +18,7 @@ const services = [
     icon: <FaCogs />,
     title: "CMS Development",
     description:
-      "I set up easy-to-use sites on platforms like WordPress, Shopify, and Wix so you can update content yourself. Whether it’s a blog, store, or company site, I make it simple and styled to your brand.",
+      "I set up easy-to-use sites on platforms like WordPress, Shopify, and Wix so you can update content yourself. Whether it’s a store or landing page, I make it simple and styled to your brand.",
   },
   {
     icon: <FaPaintBrush />,
@@ -52,7 +52,7 @@ const services = [
   },
   {
     icon: <FaBitcoin />,
-    title: "Crypto & Web3 Website Development",
+    title: "Web3 Website Development",
     description:
       "I build user-friendly sites for crypto projects—ICO landing pages, DEXs, and NFT platforms. Every site is secure, scalable, and designed for a top-notch user experience.",
   },
@@ -65,15 +65,25 @@ const Services = () => {
   return (
     <section id="services" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl text-accent-2 lg:text-5xl font-bold font-playfair mb-4">
+            What I<span style={{ color: '#f25a38' }}> Do</span>
+          </h2>
+          <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#f25a38' }}></div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">
-            What I Do
-          </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Comprehensive web solutions tailored to your needs
           </p>

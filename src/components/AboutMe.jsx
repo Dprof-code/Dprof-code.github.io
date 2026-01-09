@@ -58,7 +58,7 @@ const AboutMe = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-gray-300 text-lg leading-relaxed"
             >
-              I&apos;m Abraham, a dedicated full-stack developer with deep expertise in backend engineering and modern web technologies like Node.js, TypeScript, React, Next.js, and Express. My passion lies in crafting scalable, production-ready APIs and server-side systems that seamlessly blend robust backend functionality with engaging front-end experiences, leveraging tools like PostgreSQL, MongoDB, Redis, and AI integrations including OpenAI.
+              I&apos;m Abraham, a full-stack developer who specializes in backend engineering and intelligent automation—building the technical systems that power modern businesses. Over the past 5+ years, I&apos;ve architected scalable APIs, integrated AI capabilities (Gemini, OpenAI, Claude), and designed complex backend solutions using Node.js, TypeScript, NestJS, Express, PostgreSQL, and microservices. From payment processing with Stripe to real-time features with WebSockets and React frontends, I create production-ready systems that handle growth while maintaining performance, security, and reliability.
             </motion.p>
 
             <motion.p
@@ -67,7 +67,7 @@ const AboutMe = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="text-gray-300 text-lg leading-relaxed"
             >
-              Combining technical proficiency and creative problem-solving, I consistently deliver performant solutions using microservices architecture, Docker, message queues, and intelligent automation workflows through platforms like Zapier and Make. Driven to stay ahead of technological trends, I continually expand my skillset to ensure every project exceeds client expectations and delights users.
+              Beyond traditional development, I architect business automation workflows that eliminate manual work and accelerate operations. Using Clay, GoHighLevel, Zapier, and Make, I design intelligent pipelines connecting CRMs, marketing tools, payment systems, and databases—saving businesses hundreds of hours monthly. Whether you need a full-stack application with AI integration, a scalable backend API with Next.js frontend, or automated workflows that connect your entire tech stack, I deliver solutions that don&apos;t just work today but scale for tomorrow and drive measurable results.
             </motion.p>
 
             <motion.div

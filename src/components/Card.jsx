@@ -34,7 +34,7 @@ const Card = ({ title, description, icon, isActive, onHover, onLeave }) => {
           {description}
         </p>
 
-        <motion.div
+        {/* <motion.div
           className="mt-4 flex items-center text-accent font-medium opacity-0 group-hover:opacity-100
                     transition-opacity duration-300"
           initial={{ x: -20 }}
@@ -45,7 +45,7 @@ const Card = ({ title, description, icon, isActive, onHover, onLeave }) => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
               d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

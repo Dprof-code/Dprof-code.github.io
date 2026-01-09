@@ -28,13 +28,21 @@ const TechStacks = () => {
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl text-accent-2 lg:text-5xl font-bold font-playfair mb-4">
+            My <span style={{ color: '#f25a38' }}>Skills</span>
+          </h2>
+          <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#f25a38' }}></div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-white mb-4">
-            Experience
-          </h2>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
             Technologies and tools I work with
           </p>
