@@ -7,6 +7,41 @@ const Portfolio = () => {
 
   const projects = [
     {
+      title: "Tolkz Speakers Website",
+      description: "A comprehensive platform connecting aspiring and professional speakers with event organizers in USA, UK, Canada and Africa. Features event management, speaker applications, course enrollments, integrated e-commerce with Stripe payments, automated email notifications, QR code ticket generation, and robust error tracking with Sentry.",
+      technologies: ["PHP", "MySQL", "Composer", "TailwindCSS", "JavaScript", "Stripe", "Cloudinary", "Sentry", "PHPMailer"],
+      codeLink: "#",
+      liveLink: "https://tolkzspeakers.com/",
+      image: "/projects/thumbnails/Tolkz Speakers.png",
+    },
+    {
+      title: "Select Ceilings Website",
+      description:
+        "A modern website for Select Ceilings a US based B2B company focused on Drywall Installation, showcasing their ceiling solutions with a sleek design, interactive galleries, and easy navigation.",
+      technologies: ["WordPress", "Elementor", "CSS"],
+      codeLink: "#",
+      liveLink: "#",
+      image: "/projects/thumbnails/Select Ceilings.png",
+    },
+    {
+      title: "Exuma Tide Villas Website",
+      description:
+        "A luxurious vacation rentals website for Exuma Tide Villas a Bahamas-based luxury villa rental company, featuring stunning visuals, booking functionality, and detailed property information.",
+      technologies: ["WordPress", "Elementor", "CSS"],
+      codeLink: "#",
+      liveLink: "#",
+      image: "/projects/thumbnails/Exuma Tide Villas.png",
+    },
+    {
+      title: "Silent Knight Website",
+      description:
+        "A professional website for Silent Knight a US-based security services company, highlighting their offerings with a clean design, client testimonials, and easy contact options.",
+      technologies: ["Weebly", "HTML", "CSS"],
+      codeLink: "#",
+      liveLink: "#",
+      image: "/projects/thumbnails/Silent Knight.png",
+    },
+    {
       title: "Foodz Hub Restaurant Website",
       description:
         "A dynamic restaurant website, featuring an online menu, reservation system, and a visually rich layout to attract food lovers.",
@@ -52,15 +87,6 @@ const Portfolio = () => {
       image: "/projects/thumbnails/Rentals Hub.png",
     },
     {
-      title: "Broad Kapital Website",
-      description:
-        "A corporate website for Broad Kapital, providing financial services with a focus on user-friendly navigation and a professional design.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-      codeLink: "#",
-      liveLink: "https://broadkapital.com/",
-      image: "/projects/thumbnails/BroadKapital.png",
-    },
-    {
       title: "Easync Dropshipping Website",
       description:
         "A dropshipping website designed to facilitate easy and seamless order fulfillment for E-commerce businesses.",
@@ -68,24 +94,6 @@ const Portfolio = () => {
       codeLink: "#",
       liveLink: "https://myeasync.netlify.app/",
       image: "/projects/thumbnails/Easync Dropshipping.png",
-    },
-    {
-      title: "Fination Website",
-      description:
-        "A corporate site for Fination, providing global financial solutions with an intuitive and visually appealing interface.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-      codeLink: "#",
-      liveLink: "https://finationglobal.com/",
-      image: "/projects/thumbnails/Fination.png",
-    },
-    {
-      title: "Livefree Website",
-      description:
-        "A non-profit organization website designed for Livefree International, featuring event management and donation functionalities.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-      codeLink: "#",
-      liveLink: "https://livefreeinternational.org/",
-      image: "/projects/thumbnails/Livefree.png",
     },
     {
       title: "Shipping Invoice Template",
@@ -104,33 +112,6 @@ const Portfolio = () => {
       codeLink: "#",
       liveLink: "#",
       image: "/projects/thumbnails/Tech BookHub.png",
-    },
-    {
-      title: "TPSU Campus Event Management System Website",
-      description:
-        "A complete event management system for TPSU Campus, featuring user registration, ticket sales, and QR code validation for event entry.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP", "MySQL"],
-      codeLink: "#",
-      liveLink: "https://tpsucampus.com/event",
-      image: "/projects/thumbnails/TPSU Campus Event Management System.png",
-    },
-    {
-      title: "Vista Delmar Villa Vacation Website",
-      description:
-        "A vacation rental website designed for Vista Delmar Villa, featuring property listings, booking forms, and an integrated payment system.",
-      technologies: ["WordPress", "Elementor", "CSS", "JavaScript"],
-      codeLink: "#",
-      liveLink: "https://vistadelmar-villa.com/",
-      image: "/projects/thumbnails/Vista Delmar Villa Vacation Rentals.png",
-    },
-    {
-      title: "Web3 Blog Website",
-      description:
-        "A blog platform built for the Web3 community, offering articles, tutorials, and resources about blockchain and decentralized applications.",
-      technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      codeLink: "#",
-      liveLink: "#",
-      image: "/projects/thumbnails/Web3 Blog.png",
     },
   ];
 
